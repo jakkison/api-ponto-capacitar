@@ -1,6 +1,10 @@
-language: java
-jdk:
-  - openjdk8
+matrix:
+  include:
+  - language: java
+    jdk: openjdk8
+    addons:
+      mysql: '8.0'
+
 
 before_install:
   - chmod +x mvnw
