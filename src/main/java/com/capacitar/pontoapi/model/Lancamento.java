@@ -30,7 +30,7 @@ public class Lancamento implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	@Temporal(TemporalType.TIMESTAMP)// Data e hora por isso o tempotal
+	@Temporal(TemporalType.TIMESTAMP)// Data e hora por isso o temporal
 	@Column(name = "data", nullable = false)
 	private Date data;
 	
