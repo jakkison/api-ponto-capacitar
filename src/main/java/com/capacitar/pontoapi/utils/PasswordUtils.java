@@ -1,4 +1,4 @@
-/*package com.capacitar.pontoapi.utils;
+package com.capacitar.pontoapi.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +11,7 @@ public class PasswordUtils {
 	//construtor
 	public PasswordUtils() {
 		
-	}*/
+	}
 	
 	
 	/**
@@ -19,7 +19,7 @@ public class PasswordUtils {
 	*
 	* @param senha
 	* @return String
-	
+	*/
 	
 	public static String gerarBCrypt(String senha) {
 		
@@ -29,7 +29,7 @@ public class PasswordUtils {
 		
 		BCryptPasswordEncoder bcrypt = new BCryptPasswordEncoder();
 		return bcrypt.encode(senha);
-	}*/
+	}
 	
 	
 	/**
@@ -38,7 +38,7 @@ public class PasswordUtils {
 	* @param senha
 	* @param senhaEncoded
 	* @return boolean
-	
+	*/
 	
 	public static boolean senhaValida(String senha, String senhaEncoded) {
 		
@@ -47,4 +47,4 @@ public class PasswordUtils {
 		
 	}
 	
-}*/
+}
