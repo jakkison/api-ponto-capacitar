@@ -156,6 +156,8 @@ public class LancamentoController {
 		response.setData(this.converterLancamentoDto(lancamento));
 		return ResponseEntity.ok(response);
 	}
+	
+	
 
 	/**
 	 * Remove um lançamento por ID.
@@ -166,6 +168,7 @@ public class LancamentoController {
 	@DeleteMapping(value = "/{id}")
 	@PreAuthorize("hasAnyRole('ADMIN')")
 	public ResponseEntity<Response<String>> remover(@PathVariable("id") Long id) {
+		
 		log.info("Removendo lançamento: {}", id);
 		Response<String> response = new Response<String>();
 		Optional<Lancamento> lancamento = this.lancamentoService.buscarPorId(id);
@@ -179,6 +182,8 @@ public class LancamentoController {
 		this.lancamentoService.remover(id);
 		return ResponseEntity.ok(new Response<String>());
 	}
+	
+	
 
 	/**
 	 * Valida um funcionário, verificando se ele é existente e válido no sistema.
